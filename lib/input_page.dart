@@ -33,38 +33,34 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.male;
                       });
                     },
-                    child: ReusableCard(
-                      colour: (selectedGender == Gender.male)
-                          ? activeCardColor
-                          : inactiveCardColor,
-                      cardChild: GenderContent(
-                        gender: "MALE",
-                        icon: FontAwesomeIcons.mars,
-                      ),
+                    colour: (selectedGender == Gender.male)
+                        ? activeCardColor
+                        : inactiveCardColor,
+                    cardChild: GenderContent(
+                      gender: "MALE",
+                      icon: FontAwesomeIcons.mars,
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         selectedGender = Gender.female;
                       });
                     },
-                    child: ReusableCard(
-                      colour: (selectedGender == Gender.female)
-                          ? activeCardColor
-                          : inactiveCardColor,
-                      cardChild: GenderContent(
-                        gender: "FEMALE",
-                        icon: FontAwesomeIcons.venus,
-                      ),
+                    colour: (selectedGender == Gender.female)
+                        ? activeCardColor
+                        : inactiveCardColor,
+                    cardChild: GenderContent(
+                      gender: "FEMALE",
+                      icon: FontAwesomeIcons.venus,
                     ),
                   ),
                 ),
